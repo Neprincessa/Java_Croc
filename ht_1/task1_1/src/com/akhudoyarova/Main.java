@@ -37,9 +37,7 @@ public class Main {
 
 
     public static void processing(int[] inputArray) {
-        if (inputArray != null) {
-
-        }
+        
         int min = inputArray[0], max = inputArray[0], indexMax = 0, indexMin = 0;
 
         for(int i = 0; i < inputArray.length; i++) {
