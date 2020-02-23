@@ -35,39 +35,46 @@ public class Main {
             System.out.println(currentArray[i]);
     }
 
+
+    public static void processing(int[] inputArray) {
+        if (inputArray != null) {
+
+        }
+        int min = inputArray[0], max = inputArray[0], indexMax = 0, indexMin = 0;
+
+        for(int i = 0; i < inputArray.length; i++) {
+            if (max < inputArray[i]) {
+                max = inputArray[i];
+                indexMax = i;
+            }
+            if (min > inputArray[i]) {
+                min = inputArray[i];
+                indexMin = i;
+            }
+        }
+
+        if (indexMax < indexMin)
+            indexMax++;
+        Main.transferMin(inputArray, indexMin);
+        Main.transferMax(inputArray, indexMax);
+    }
+
+
     public static void main(String[] args) {
         int quantity = 20;
         int[] inputArray = Main.generateArray(quantity);
-
 
         if (inputArray != null) {
             System.out.println("Input array");
             Main.printArray(inputArray);
 
-            int min = inputArray[0], max = inputArray[0], indexMax = 0, indexMin = 0;
-
-            for(int i = 0; i < inputArray.length; i++) {
-                if (max < inputArray[i]) {
-                    max = inputArray[i];
-                    indexMax = i;
-                }
-                if (min > inputArray[i]) {
-                    min = inputArray[i];
-                    indexMin = i;
-                }
-            }
-
-            if (indexMax < indexMin)
-                indexMax++;
-            Main.transferMin(inputArray, indexMin);
-            Main.transferMax(inputArray, indexMax);
+            Main.processing(inputArray);
 
             System.out.println("Result array");
             Main.printArray(inputArray);
         }
         else
-            System.out.println("Empty array");
-
+            System.out.println("Empty array :(");
     }
 }
 
