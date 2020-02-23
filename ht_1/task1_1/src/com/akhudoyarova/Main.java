@@ -4,63 +4,70 @@ import  java.util.Random;
 public class Main {
 
 
-    public static int[] generate_array(int number) {
+    public static int[] generateArray(int number) {
         Random random = new Random(System.currentTimeMillis());
         return random.ints(number, 20,150).toArray();
     }
 
 
-    public static void transfer_min(int[] current_array, int index) {
+    public static void transferMin(int[] currentArray, int index) {
         while (index > 0) {
-            int buf = current_array[index];
-            current_array[index] = current_array[index-1];
-            current_array[index-1] = buf;
+            int buf = currentArray[index];
+            currentArray[index] = currentArray[index-1];
+            currentArray[index-1] = buf;
             index--;
         }
     }
 
 
-    public static void transfer_max(int[] current_array, int index) {
-        while (index < current_array.length-1) {
-            int buf = current_array[index];
-            current_array[index] = current_array[index+1];
-            current_array[index+1] = buf;
+    public static void transferMax(int[] currentArray, int index) {
+        while (index < currentArray.length-1) {
+            int buf = currentArray[index];
+            currentArray[index] = currentArray[index+1];
+            currentArray[index+1] = buf;
             index++;
         }
     }
 
 
-    public static void print_array(int[] current_array) {
-        for(int i = 0; i<current_array.length; i++)
-            System.out.println(current_array[i]);
+    public static void printArray(int[] currentArray) {
+        for(int i = 0; i<currentArray.length; i++)
+            System.out.println(currentArray[i]);
     }
 
     public static void main(String[] args) {
         int quantity = 20;
-        int[] input_array = Main.generate_array(quantity);
+        int[] inputArray = Main.generateArray(quantity);
 
-        System.out.println("Input array");
-        Main.print_array(input_array);
 
-        int min = input_array[0], max = input_array[0], index_max = 0, index_min = 0;
+        if (inputArray != null) {
+            System.out.println("Input array");
+            Main.printArray(inputArray);
 
-        for(int i = 0; i < input_array.length; i++) {
-            if (max < input_array[i]) {
-                max = input_array[i];
-                index_max = i;
+            int min = inputArray[0], max = inputArray[0], indexMax = 0, indexMin = 0;
+
+            for(int i = 0; i < inputArray.length; i++) {
+                if (max < inputArray[i]) {
+                    max = inputArray[i];
+                    indexMax = i;
+                }
+                if (min > inputArray[i]) {
+                    min = inputArray[i];
+                    indexMin = i;
+                }
             }
-            if (min > input_array[i]) {
-                min = input_array[i];
-                index_min = i;
-            }
+
+            if (indexMax < indexMin)
+                indexMax++;
+            Main.transferMin(inputArray, indexMin);
+            Main.transferMax(inputArray, indexMax);
+
+            System.out.println("Result array");
+            Main.printArray(inputArray);
         }
+        else
+            System.out.println("Empty array");
 
-        if (index_max < index_min)
-            index_max++;
-        Main.transfer_min(input_array, index_min);
-        Main.transfer_max(input_array, index_max);
-
-        System.out.println("Result array");
-        Main.print_array(input_array);
     }
 }
+

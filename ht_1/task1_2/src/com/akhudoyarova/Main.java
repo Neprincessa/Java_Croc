@@ -1,25 +1,24 @@
 package com.akhudoyarova;
-import javax.security.auth.login.AccountException;
 import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
 
 
-	public static void print_bytes(long volume) {
+	public static void printBytes(long volume) {
 		int counter = 0;
-		float result_volume = volume;
+		float resultVolume = volume;
 		String unit = "";
-		while ( result_volume >= 1024) {
-			result_volume = result_volume / 1024;
+		while ( resultVolume >= 1024) {
+			resultVolume = resultVolume / 1024;
 			counter++;
 		}
-		unit = Main.change_unit(counter);
-		System.out.println(String.format(Locale.US, "Result volume: %.1f %s", result_volume,unit));
+		unit = Main.changeUnit(counter);
+		System.out.println(String.format(Locale.US, "Result volume: %.1f %s", resultVolume,unit));
 	}
 
 
-	public static String change_unit(int number) {
+	public static String changeUnit(int number) {
 		String unit = "";
 		if (number == 0)
 			unit = "B";
@@ -33,6 +32,8 @@ public class Main {
 			unit = "TB";
 		if (number == 5)
 			unit = "PB";
+		if (number == 6)
+			unit = "EB";
 		return unit;
 	}
 
@@ -41,7 +42,8 @@ public class Main {
 	    int divisor = 1024;
 	    System.out.println("Fill in your volume of data:");
 	    Scanner sc = new Scanner(System.in);
-	    long input_volume = sc.nextLong();
-	    Main.print_bytes(input_volume);
+	    long inputVolume = sc.nextLong();
+	    Main.printBytes(inputVolume);
     }
 }
+
