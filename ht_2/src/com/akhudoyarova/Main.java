@@ -1,6 +1,9 @@
 package com.akhudoyarova;
 
-import java.util.Random;
+import com.akhudoyarova.figures.BoundingBox;
+import com.akhudoyarova.figures.Circle;
+import com.akhudoyarova.figures.Figure;
+
 import java.util.Scanner;
 
 public class Main {
@@ -46,7 +49,7 @@ public class Main {
 
         System.out.println("annotations");
 	    for(int i = 0; i < annotations.length; i++) {
-	        annotations[i].print();
+            System.out.println(annotations[i]);
             System.out.println("\n");
         }
 
@@ -59,7 +62,7 @@ public class Main {
         System.out.println("\n");
         Annotation result = findByPoint(annotations, parametr[0],parametr[1]);
         if (result != null)
-            result.print();
+            System.out.println(result);
         else
             System.out.println("Element not found");
 
