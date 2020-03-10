@@ -38,4 +38,3 @@ public class ChessDesk {
         return ALPHABET[this.x] + String.valueOf(this.y + 1);
     }
 }
-
