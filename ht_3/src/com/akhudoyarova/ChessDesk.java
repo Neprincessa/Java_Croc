@@ -1,7 +1,7 @@
 package com.akhudoyarova;
 
 public class ChessDesk {
-
+	private static final char[] ALPHABET = "abcdefgh".toCharArray();
     int x;
     int y;
 	
@@ -16,24 +16,16 @@ public class ChessDesk {
 	
 	
 	public ChessDesk(String pos) {
-		String alph = "abcdefgh";
-       	char[] alphabet = alph.toCharArray();
 		char[] tmp = pos.toCharArray();
 
 		if (tmp.length != 2){
 			throw new IllegalArgumentException("Invalid coordinates");
 		}
-		
-		boolean flag = false;
-		for (int i = 0; i < alphabet.length; i++) {
-			if (tmp[0] == alphabet[i]) {
-				flag = true;
-				this.x = i;
-			}
-		}
-		if (!flag) {
+
+		if (tmp[0] < 'a' || tmp[0] > 'h')
 			throw new IllegalArgumentException("Invalid coordinates");
-		}
+		this.x = tmp[0] - 'a';
+
 		if (tmp[1] < '1' || tmp[1] > '8') {
 			throw new IllegalArgumentException("Invalid coordinates");
 		}
@@ -43,8 +35,7 @@ public class ChessDesk {
 
     @Override
     public String toString() {
-		String alph = "abcdefgh";
-		char[] alphabet = alph.toCharArray();
-        return alphabet[this.x] + String.valueOf(this.y + 1);
+        return ALPHABET[this.x] + String.valueOf(this.y + 1);
     }
 }
+
