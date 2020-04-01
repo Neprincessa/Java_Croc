@@ -21,7 +21,7 @@ public class Window {
      * mark the window: free or busy
      * @param status
      */
-    public void upgradeStatus(boolean status) {}
+    public void updateStatus(boolean status) {}
 
     /**
      * show what this window do in current moment
