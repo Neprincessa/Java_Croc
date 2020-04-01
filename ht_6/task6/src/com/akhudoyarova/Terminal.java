@@ -6,9 +6,7 @@ public class Terminal {
             "Stay for medical services", "Transit", "Get documents"};
     int minAvailableNumber;
 
-    Terminal(){
-        this.minAvailableNumber = 0;
-    }
+    Terminal(){}
 
     /**
      * show what can user choose (depend on time)

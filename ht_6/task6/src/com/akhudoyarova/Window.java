@@ -15,41 +15,16 @@ public class Window {
      * @param number
      * @param currentModes
     **/
-    Window(boolean call, int number, String... currentModes){
-        for (int i = 0; i < currentModes.length; i++) {
-            this.modes[i] = currentModes[i];
-        }
-        this.callClient = false;
-        this.number = number;
-    }
+    Window(boolean call, int number, String... currentModes){}
 
     /**
      * mark the window: free or busy
      * @param status
      */
-    public void upgradeStatus(boolean status) {
-        this.callClient = status;
-    }
+    public void upgradeStatus(boolean status) {}
 
     /**
      * show what this window do in current moment
      */
-    public void showOptions() {
-        Date dateNow = new Date();
-        SimpleDateFormat formatForDateNow = new SimpleDateFormat("k:mm");
-        String[] tmp =  formatForDateNow.format(dateNow).toString().split(":");
-        int[] data = new int[2];
-        for (int i = 0; i < tmp.length; i++) {
-            data[i] = Integer.parseInt(tmp[i]);
-        }
-        System.out.println("Available options for window №"+Integer.toString(this.number));
-        if (data[0] > 12) {
-            System.out.println("Get documents");
-        }
-        else {
-            for (int i = 0; i < this.modes.length; i++){
-                System.out.println(this.modes[i]);
-            }
-        }
-    }
+    public void showOptions() {}
 }
