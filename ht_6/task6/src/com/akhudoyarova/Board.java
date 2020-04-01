@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class Board {
 
-    Map<Integer, String> board;;
+    Map<Integer, String> board;
 
     Board() {}
 
