@@ -3,7 +3,7 @@ package com.akhudoyarova;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Board {
+public class Board implements Update{
 
     Map<Integer, String> board;
 
@@ -23,4 +23,6 @@ public class Board {
      */
     public void add(int number, String status) {}
 
+    @Override
+    public void update() {}
 }

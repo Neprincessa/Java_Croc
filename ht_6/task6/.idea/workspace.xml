@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e05f914-b8bc-4ce6-88d2-dcf619a209b4" name="Default Changelist" comment="" />
+    <list default="true" id="1e05f914-b8bc-4ce6-88d2-dcf619a209b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/akhudoyarova/Update.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/akhudoyarova/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/akhudoyarova/Board.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,6 +15,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -72,6 +77,7 @@
       <workItem from="1585733356838" duration="9125000" />
       <workItem from="1585742962741" duration="129000" />
       <workItem from="1585743151565" duration="537000" />
+      <workItem from="1585749804186" duration="733000" />
     </task>
     <servers />
   </component>
@@ -79,10 +85,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="684" y="252" width="541" height="601" key="#com.intellij.ide.util.MemberChooser" timestamp="1585734509682">
+    <state x="684" y="252" width="541" height="601" key="#com.intellij.ide.util.MemberChooser" timestamp="1585750606524">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="684" y="252" width="541" height="601" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1585734509682" />
+    <state x="684" y="252" width="541" height="601" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1585750606524" />
+    <state x="523" y="56" width="864" height="992" key="CommitChangelistDialog2" timestamp="1585750633698">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="523" y="56" width="864" height="992" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1585750633698" />
     <state width="1874" height="255" key="GridCell.Tab.0.bottom" timestamp="1585741172853">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>

@@ -3,7 +3,7 @@ package com.akhudoyarova;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Window {
+public class Window implements Update{
     String[] modes;
     int number;
     boolean callClient;
@@ -27,4 +27,7 @@ public class Window {
      * show what this window do in current moment
      */
     public void showOptions() {}
+
+    @Override
+    public void update() {}
 }
